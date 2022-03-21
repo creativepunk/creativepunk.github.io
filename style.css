@@ -10,9 +10,9 @@ html {
   background: #292929;
 }
 
-a, h4 {
+a, h5 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: white;
 }
@@ -28,6 +28,13 @@ h1 {
   font-family: 'DM Serif Display', serif;
   font-size: 6vw;
   font-weight: 600;
+  color: white;
+}
+
+h5 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
   color: white;
 }
 
@@ -67,17 +74,17 @@ nav .nav-left {
 }
 
 nav .logo {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 nav .logo img {
-  width: 4.2rem;
+  width: 3rem;
 }
 
-nav h4 {
+nav h5 {
   padding: 0;
-  margin-left: 2.5rem;
+  margin-left: 2rem;
   color: white;
 }
 
@@ -92,10 +99,11 @@ nav h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 200vh;
+  height: 90vh;
   width: 100%;
   position: relative;
   position: fixed;
+  bottom: 0;
 }
 
 .hero .left {
@@ -171,7 +179,7 @@ nav h4 {
   height: 5rem;
 }
 
-.hero .left .main-nav h4 {
+.hero .left .main-nav h5 {
   color: white;
   padding-left: 3rem;
 }
@@ -182,6 +190,7 @@ nav h4 {
 }
 
 .hero .left .main-text {
+  width: 29vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,9 +231,9 @@ nav h4 {
   bottom: 3vh;
 }
 
-.hero .left .follow-at h4 {
+.hero .left .follow-at h5 {
   color: white;
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 .hero .follow-at .social-media-icons {
@@ -240,8 +249,8 @@ nav h4 {
 }
 
 .hero .follow-at .social-media-icons img {
-  width: 3rem;
-  margin-left: 2rem;
+  width: 2rem;
+  margin-left: 1rem;
   cursor: pointer;
 }
 
@@ -258,7 +267,6 @@ nav h4 {
   height: 80vh;
   width: 100%;
   left: 0;
-  margin-top: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,6 +337,7 @@ nav h4 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  overflow: hidden;
 }
 
 .sec-nav {
@@ -336,6 +345,7 @@ nav h4 {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1rem;
+  margin-top: 2.2rem;
 }
 
 .sec-nav button {
@@ -343,10 +353,6 @@ nav h4 {
   background: transparent;
   border: none;
   cursor: pointer;
-}
-
-.sec-nav button :hover + .btn2 {
-  color: yellow;
 }
 
 .gallery {
@@ -407,5 +413,23 @@ nav h4 {
   .cards1, .cards2 {
     min-height: 40rem;
   }
+}
+
+/*Fun page*/
+.tools-used {
+  width: 100%;
+  min-height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.tools-used img {
+  width: 5rem;
+  padding: 1em;
 }
 /*# sourceMappingURL=style.css.map */
