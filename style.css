@@ -108,7 +108,7 @@ nav h5 {
 
 .hero .left {
   width: calc(50vw - 6.3rem);
-  height: inherit;
+  min-height: 100%;
   position: relative;
   margin-left: 6.3rem;
 }
@@ -257,7 +257,7 @@ nav h5 {
 /*Hero section Right*/
 .hero .right {
   width: calc(50vw - 6.3rem);
-  height: inherit;
+  min-height: 100%;
   position: relative;
   margin-right: 6.3rem;
 }
