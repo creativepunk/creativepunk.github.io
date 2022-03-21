@@ -13,12 +13,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="">
     <header class="main-head">
         <nav>
             <div class="nav-left">
-                <div class="logo"><img src="./icons/logo.svg" alt=""></div>
+                <div class="logo">
+                    <img src="./icons/logo.svg" alt="" class="icon-colors">
+                    <!-- <img src="./icons/logo-black.svg" alt="" class="black-icon"> -->
+                </div>
                 <h5>Pushpal Dey Design</h5>
+            </div>
+            
+            <div>
+                <input type="checkbox" class="checkbox" id="chk" />
+                <label class="label" for="chk">
+                    <div class="ball"></div>
+                </label>
             </div>
         </nav>
     </header>
@@ -27,52 +37,134 @@
         <div class="left">
             <div class="main-text">
                 <h1>Hello!</h1>
-                <h3>I am a <span class="typed-text"></span><br> based out of Mumbai.</h3>
+                <h3>I am a multidisciplinary designer based out of Mumbai</h3>
+                <h4>I like to work with both <span class="work-style">tangible</span> and <span class="work-style">Digital Products.</span></h4>
             </div>
             <div class="main-nav">
                 <div class="page-container"><a href="./index.html" style="text-decoration: none;">
                     <div class="current-circle"></div>
                     <div class="pages">
-                        <img src="./icons/hello.svg" alt="">
-                        <h5 class="current-page">Hello</h5>
-                    </div></a>
-                </div>
-                <div class="page-container"><a href="./work.html" style="text-decoration: none;">
-                    <div class="circle"></div>
-                    <div class="pages">
-                        <img src="./icons/work.svg" alt="">
+                        <img src="./icons/work.svg" alt="" class="icon-colors">
+                        <!-- <img src="./icons/work-black.svg" alt="" class="black-icon"> -->
                         <h5>Work</h5>
                     </div></a>
                 </div>
                 <div class="page-container"><a href="./fun.html" style="text-decoration: none;">
                     <div class="circle"></div>
                     <div class="pages">
-                        <img src="./icons/fun.svg" alt="">
+                        <img src="./icons/fun.svg" alt="" class="icon-colors">
+                        <!-- <img src="./icons/fun-black.svg" alt="" class="black-icon"> -->
                         <h5>Fun</h5>
                     </div></a>
-                </div>                
+                </div>    
+                <div class="page-container"><a href="./hello.html" style="text-decoration: none;">
+                    <div class="circle"></div>
+                    <div class="pages">
+                        <img src="./icons/hello.svg" alt="" class="icon-colors">
+                        <!-- <img src="./icons/hello-black.svg" alt="" class="black-icon"> -->
+                        <h5 class="current-page">About me</h5>
+                    </div></a>
+                </div>            
             </div>
+            
             <div class="follow-at">
                 <h5>Follow me at</h5>
                 <div class="social-media-icons">
-                    <img src="./icons/dribbble-square.svg" alt="">
-                    <img src="./icons/instagram.svg" alt="">
-                    <img src="./icons/linkedin.svg" alt="">
+                    <img src="./icons/dribbble-square.svg" alt="" class="icon-colors">
+                    <img src="./icons/instagram.svg" alt="" class="icon-colors">
+                    <img src="./icons/linkedin.svg" alt="" class="icon-colors">
                 </div>
             </div>
         </div>
         <div class="right">
             <div class="lines">
-                <div class="line1"></div>
                 <div class="gallery-space">
+                    <div class="sec-nav">
+                        <button onclick="showGallery1()">
+                            <h5 class="btn1">Digital</h5>
+                            <div class="underline1"></div>
+                        </button>
+                        <button onclick="showGallery2()">
+                            <h5 class="btn2">Tangible (Industrial Design)</h5>
+                            <div class="underline2"></div>
+                        </button>
+                    </div>
+                    <div class="line1"></div>
+                    <div class="gallery">
+                        <div class="gallery1">
+                            <div class="cards1">
+                                <img src="./images/Image 24.jpg" alt="">
+                            </div>
+                            <div class="cards1">
+                                <img src="./images/Image 25.jpg" alt="">
+                            </div>
+                            <div class="cards1">
+                                <img src="./images/Image 26.jpg" alt="">
+                            </div>
+                            <div class="cards1">
+                                <img src="./images/Mask Group 15.jpg" alt="">
+                            </div>
+                            <div class="cards1">
+                    
+                            </div>
+                            <div class="cards1">
+                    
+                            </div>
+                            <div class="cards1">
+                    
+                            </div>
+                            <div class="cards1">
+                    
+                            </div>
+                            <div class="cards1">
+                    
+                            </div>
+                            <div class="cards1">
+                                
+                            </div>
+                        </div>
                    
+
+                        <div class="gallery2">
+                            <div class="cards2">
+                            
+                            </div>
+                            <div class="cards2">
+                    
+                            </div>
+                            <div class="cards2">
+                    
+                            </div>
+                            <div class="cards2">
+                    
+                            </div>
+                            <div class="cards2">
+                    
+                            </div>
+                            <div class="cards2">
+                    
+                            </div>
+                            <div class="cards2">
+                    
+                            </div>
+                            <div class="cards2">
+                    
+                            </div>
+                            <div class="cards2">
+                    
+                            </div>
+                            <div class="cards2">
+                                
+                            </div>
+                        </div>
+                        <div class="boxes">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="line2"></div>
                 
-                <div class="boxes">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                </div>
+
 
             </div>
             

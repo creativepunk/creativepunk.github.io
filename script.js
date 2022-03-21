@@ -42,21 +42,37 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
 
 var gallery1 = document.querySelector(".gallery1");
 var gallery2 = document.querySelector(".gallery2");
-var btn1 = document.querySelector(".btn1")
-var btn2 = document.querySelector(".btn2")
+var btn1 = document.querySelector(".btn1");
+var btn2 = document.querySelector(".btn2");
+var underline1 = document.querySelector(".underline1");
+var underline2 = document.querySelector(".underline2");
 
 function showGallery1() {
-  console.log(gallery1);
+  
   gallery1.style.display="grid";  
-  gallery2.style.display="none"
-  btn1.style.color= "rgb(255, 255, 0)"
-  btn2.style.color= "white"
+  gallery2.style.display="none";
+  underline1.style.width="100%";
+  underline2.style.width="0";
 }
 function showGallery2() {
   gallery1.style.display="none";
-  gallery2.style.display="grid"; 
-  btn1.style.color= "white"
-  btn2.style.color= "rgb(255, 255, 0)"   
+  gallery2.style.display="grid";
+  underline1.style.width="0"; 
+  underline2.style.width="100%";  
 }
 
 showGallery1()
+
+
+var toggleSwitch = document.querySelector(".theme");
+var iconColors = document.querySelectorAll(".icon-colors");
+const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+  document.body.classList.toggle("light-theme");
+  iconColors.forEach(item => {
+    item.classList.toggle("icon-colors");
+  });
+  // console.log(toggleSwitch);
+});
+
