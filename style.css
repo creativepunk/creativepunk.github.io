@@ -25,29 +25,30 @@ body {
   background: var(--secondary-color);
 }
 
-a, h5 {
-  font-family: 'Poppins', sans-serif;
+a,
+h5 {
+  font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
   color: var(--primary-color);
 }
 
 h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.5vw;
   font-weight: 500;
   color: var(--primary-color);
 }
 
 h1 {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: 5vw;
   font-weight: 600;
   color: var(--primary-color);
 }
 
 h4 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.2vw;
   font-weight: 500;
   color: var(--primary-color);
@@ -133,6 +134,24 @@ nav h5 {
   margin-left: 6.3rem;
 }
 
+.left-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-height: 85vh;
+  align-items: flex-start;
+}
+
 .hero .left .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,9 +161,6 @@ nav h5 {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 20rem;
-  position: absolute;
-  bottom: 20vh;
-  position: fixed;
 }
 
 .hero .left .main-nav .page-container {
@@ -176,7 +192,7 @@ nav h5 {
   border: 1px solid var(--highlight-color);
   border-radius: 2.5rem;
   z-index: -1;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .hero .left .main-nav .page-container:hover .circle {
@@ -206,11 +222,12 @@ nav h5 {
 
 .hero .left .main-nav img {
   width: 2rem;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .hero .left .main-text {
   width: 24vw;
+  height: 24rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,10 +235,6 @@ nav h5 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: absolute;
-  position: fixed;
-  top: 15vh;
-  left: 6.3rem;
 }
 
 .hero .left h1 {
@@ -247,9 +260,6 @@ nav h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  position: fixed;
-  bottom: 7vh;
 }
 
 .hero .left .follow-at h5 {
@@ -413,8 +423,6 @@ nav h5 {
   width: 100%;
   height: 80vh;
   overflow: auto;
-  display: -ms-grid;
-  display: grid;
   -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   grid-column-gap: 2rem;
@@ -448,11 +456,13 @@ nav h5 {
 }
 
 @media (min-width: 1500px) {
-  .gallery1, .gallery2 {
+  .gallery1,
+  .gallery2 {
     -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   }
-  .cards1, .cards2 {
+  .cards1,
+  .cards2 {
     min-height: 40rem;
   }
 }
@@ -478,12 +488,11 @@ nav h5 {
 /*Theme Toggle*/
 .checkbox {
   opacity: 0;
-  position: absolute;
 }
 
 .label {
-  background-color: #111;
-  border-radius: 50px;
+  background-color: black;
+  border-radius: 100vh;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -494,40 +503,56 @@ nav h5 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 5px;
+  padding: 0.5rem;
   position: relative;
-  height: 10px;
-  width: 20px;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  height: 1rem;
+  width: 2rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
 .label .ball {
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
-  top: 2px;
-  left: 2px;
-  height: 6px;
-  width: 6px;
+  top: 0.2rem;
+  left: 0.2rem;
+  height: 0.6rem;
+  width: 0.6rem;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
   -webkit-transition: -webkit-transform 0.2s linear;
   transition: -webkit-transform 0.2s linear;
   transition: transform 0.2s linear;
   transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+  z-index: 99;
+}
+
+.label .sun {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  height: 0.7rem;
+  width: 0.7rem;
+  pointer-events: none;
+}
+
+.moon {
+  position: absolute;
+  top: 0.2rem;
+  left: 1.2rem;
+  height: 0.6rem;
+  width: 0.6rem;
+  pointer-events: none;
 }
 
 .checkbox:checked + .label .ball {
   -webkit-transform: translateX(10px);
           transform: translateX(10px);
+  background: #111;
 }
 
-.fa-moon {
-  color: #f1c40f;
-}
-
-.fa-sun {
-  color: #f39c12;
+.checkbox:checked + .label {
+  background: #fff;
 }
 /*# sourceMappingURL=style.css.map */
