@@ -55,6 +55,7 @@ h4 {
   width: 100%;
   min-height: 4rem;
   position: fixed;
+  top: 0;
 }
 nav {
   padding: 2rem 6.3rem 0rem;
@@ -98,7 +99,7 @@ nav h5 {
   height: 90vh;
   width: 100%;
   //background: red;
-  position: relative;
+  // position: relative;
   position: fixed;
   bottom: 0;
 }

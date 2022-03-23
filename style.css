@@ -59,6 +59,7 @@ h4 {
   width: 100%;
   min-height: 4rem;
   position: fixed;
+  top: 0;
 }
 
 nav {
@@ -123,7 +124,6 @@ nav h5 {
           align-items: center;
   height: 90vh;
   width: 100%;
-  position: relative;
   position: fixed;
   bottom: 0;
 }
