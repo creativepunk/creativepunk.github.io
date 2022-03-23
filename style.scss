@@ -54,7 +54,7 @@ h4 {
   //background: rgb(255, 107, 107);
   width: 100%;
   min-height: 4rem;
-  position: fixed;
+  position: absolute;
   top: 0;
 }
 nav {
@@ -100,7 +100,7 @@ nav h5 {
   width: 100%;
   //background: red;
   // position: relative;
-  position: fixed;
+  position: absolute;
   bottom: 0;
 }
 
