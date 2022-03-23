@@ -75,6 +75,8 @@ let darkMode = localStorage.getItem('darkMode');
 
 const darkModeToggle = document.querySelector('#chk');
 var iconColors = document.querySelectorAll(".icon-colors");
+var label = document.querySelector(".label");
+var ball = document.querySelector(".ball");
 
 const enableDarkMode = () => {
   // 1. Add the class to the body
@@ -85,6 +87,10 @@ const enableDarkMode = () => {
   });
   // 3. Update darkMode in localStorage
   localStorage.setItem('darkMode', 'enabled');
+
+  //4. update toggle class
+  label.classList.add("label-dark");
+  ball.classList.add("ball-dark");
 }
 
 const disableDarkMode = () => {
@@ -96,6 +102,9 @@ const disableDarkMode = () => {
   });
   // 3. Update darkMode in localStorage 
   localStorage.setItem('darkMode', null);
+
+  label.classList.remove("label-dark");
+  ball.classList.remove("ball-dark");
 }
  
 // If the user already visited and enabled darkMode
