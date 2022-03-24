@@ -32,6 +32,13 @@ h4 {
   font-weight: 500;
 }
 
+h5 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: black;
+}
+
 .main-text {
   width: 50rem;
 }
@@ -39,7 +46,7 @@ h4 {
 nav {
   min-height: 10vh;
   padding: 2rem;
-  width: 90%;
+  width: 90vw;
   background: green;
   margin: auto;
   display: -webkit-box;
@@ -81,12 +88,9 @@ nav {
           align-items: center;
 }
 
-.left, .right {
-  width: 50%;
-  height: 90vh;
-}
-
 .left {
+  width: 40%;
+  height: 90vh;
   background: lightcyan;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,7 +106,11 @@ nav {
 }
 
 .right {
+  width: 60%;
+  height: 90vh;
   background: lightgreen;
+  padding: 5rem 0;
+  overflow: hidden;
 }
 
 .hero .follow-at {
@@ -117,7 +125,7 @@ nav {
           align-items: center;
 }
 
-.hero button {
+.hero .pages {
   background: transparent;
   border: 1px solid red;
   width: 10rem;
@@ -147,5 +155,102 @@ nav {
   -webkit-filter: invert(1);
           filter: invert(1);
   margin-left: 1rem;
+}
+
+.gallery-space {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 2rem 1rem auto;
+      grid-template-rows: 2rem 1rem auto;
+}
+
+.sec-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.sec-nav button {
+  margin-right: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hero .right .line1 {
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.gallery {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  padding-top: 1rem;
+}
+
+.gallery1 {
+  width: 100%;
+  overflow: auto;
+  -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  display: -ms-grid;
+  display: grid;
+}
+
+.hero .right .boxes {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.hero .right .box {
+  width: 2rem;
+  height: 2rem;
+  background: black;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cards1 {
+  min-height: 40rem;
+  background: white;
+  -webkit-box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
+          box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100vh;
+  background: #dddddd;
+  position: absolute;
+  left: 10px;
 }
 /*# sourceMappingURL=style.css.map */
