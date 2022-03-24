@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  top: 0;
+  background: red;
+}
+
+nav {
+  min-height: 10vh;
+  padding: 2rem;
+  width: 90%;
+  background: green;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-left {
+  height: 15px;
+  width: 300px;
+  background: blue;
+}
+
+.toggle {
+  height: 15px;
+  width: 20px;
+  background: lightblue;
+}
+
+.hero {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  background: lightcoral;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left, .right {
+  width: 50%;
+  height: 90vh;
+}
+
+.left {
+  background: lightcyan;
+}
+
+.right {
+  background: lightgreen;
+}
+/*# sourceMappingURL=style.css.map */

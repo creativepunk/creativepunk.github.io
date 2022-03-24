@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    top: 0;
+    background: red;
+}
+nav{
+   min-height: 10vh;
+   padding: 2rem;
+   width: 90%;
+   background: green;
+   margin: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.nav-left{
+    height: 15px;
+    width: 300px;
+    background: blue;
+}
+.toggle{
+    height: 15px;
+    width: 20px;
+    background: lightblue;
+}
+.hero{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    background: lightcoral;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left, .right{
+    width: 50%;
+    height: 90vh;
+}
+.left{
+    background: lightcyan;
+    
+}
+.right{
+    background: lightgreen;
+    
+}
