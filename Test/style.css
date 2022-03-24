@@ -5,9 +5,35 @@
           box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 header {
   top: 0;
   background: red;
+}
+
+h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: 5vw;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+.main-text {
+  width: 50rem;
 }
 
 nav {
@@ -28,8 +54,8 @@ nav {
 }
 
 .nav-left {
-  height: 15px;
-  width: 300px;
+  height: 1.5rem;
+  width: 30rem;
   background: blue;
 }
 
@@ -43,7 +69,7 @@ nav {
   position: relative;
   width: 90%;
   margin: auto;
-  background: lightcoral;
+  background: #ff6d6d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,9 +88,64 @@ nav {
 
 .left {
   background: lightcyan;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5rem 0;
 }
 
 .right {
   background: lightgreen;
+}
+
+.hero .follow-at {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero button {
+  background: transparent;
+  border: 1px solid red;
+  width: 10rem;
+  height: 4rem;
+  border-radius: 100vh;
+  margin: 1rem 0;
+  padding-left: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+}
+
+.hero .follow-at img {
+  width: 3rem;
+  height: 3rem;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  margin-left: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
