@@ -56,7 +56,7 @@ h4 {
 }
 nav {
   min-height: 10vh;
-   padding: 2rem;
+   padding: 2rem 0;
    width: 90vw;
   //  background: green;
    margin: auto;
@@ -80,6 +80,20 @@ nav .logo img {
   width: 3rem;
 }
 
+.icon-colors {
+  filter: invert(1);
+}
+nav h5 {
+  padding: 0;
+  margin-left: 2rem;
+  color: var(--primary-color);
+}
+.main-head .menu{
+  display: none;
+}
+.menu-background{
+  display: none;
+}
 
 
 /*********************************************/
@@ -148,14 +162,6 @@ nav .logo img {
 
 /*********************************************/
 
-.icon-colors {
-  filter: invert(1);
-}
-nav h5 {
-  padding: 0;
-  margin-left: 2rem;
-  color: var(--primary-color);
-}
 
 /*********************************************/
 /*Hero section left*/
@@ -338,7 +344,7 @@ width: 100%;
   display: block;
   border-bottom: 2px solid var(--primary-color);
   position: absolute;
-  bottom: -1.1rem;
+  bottom: -1rem;
   transform-origin: right;
   transform-box: fill-box;
   transition: all 0.3s ease-in-out;
@@ -420,15 +426,150 @@ width: 100%;
 
 
 
-// @media (min-width: 1500px) {
-  
-//   .gallery1,
-//   .gallery2 {
-//     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-//   }
-//   .cards1,
-//   .cards2 {
-//     min-height: 40rem;
-//   }
-// }
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h3{
+    font-size: 1.2rem;
+  }
+  h4{
+    font-size: 1.2rem;
+  }
+  .main-head{
+    position: sticky;
+    width: 100%;
+    z-index: 99;
+    background: white;
+  }
+  .main-head .logo{
+    display: none;
+  }
+  nav h5{
+    margin: 0;
+    width: 10rem;
+    font-weight: 900;
+  }
+  .main-head .menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    text-align: right;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 
+    & img{
+      width: 2rem;
+    }
+  }
+  .main-head .theme-toggle{
+    display: none;
+  }
+
+  .menu-background.inactive{
+    display: none;
+    width: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-background{
+    background: white;
+    box-shadow: 0 2px 5px rgba($color: rgb(105, 105, 105), $alpha: 0.3);
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+
+    & .cross{
+      width: 100vw;
+      height: 3.3rem;
+      flex: 1 1 2rem;
+      margin: 1rem;
+      text-align: end;
+      
+      & img{
+        margin: 2rem;
+      }
+    }
+
+    & ul{
+      flex: 2 1 2rem;
+      text-align: center;
+      list-style: none;
+
+      & a{
+        display: block;
+        text-decoration: none;
+        font-size: 2.5rem;
+        margin: 2rem;
+      }
+      
+    }
+
+    & .follow{
+      flex: 1 1 2rem;
+    }
+  }
+
+  .hero {
+      position: fixed;
+      top: 12vh;
+      width: 100%;
+      margin: auto;
+      // background: rgb(255, 109, 109);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 10rem auto;
+  }
+  .hero .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 90%;
+    margin: auto;
+    padding: 0;
+    // background: lightblue;
+  }
+  .hero .right{
+    width: 100%;
+    // background: green;
+    width: 90%;
+    height: 75vh;
+    margin: auto;
+    padding: 0;
+  }
+  .hero .right .boxes{
+    display: none;
+  }
+  .hero .left .main-text{
+    width: 100%;
+
+    & h3{
+      margin: 0;
+    }
+  }
+  .hero .left .main-nav{
+    display: none;
+  }
+  .hero .left .follow-at{
+    display: none;
+  }
+  .sec-nav{
+    justify-content: space-between;
+  }
+  .sec-nav h5{
+    font-size: 1.2rem;
+  }
+  .sec-nav button {
+    margin-right: 2rem;
+  }
+ 
+}

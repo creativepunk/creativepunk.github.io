@@ -126,3 +126,19 @@ darkModeToggle.addEventListener('click', () => {
     disableDarkMode(); 
   }
 });
+
+
+/*Mobile Menu Toggle*/
+
+var menu = document.querySelector(".menu");
+var cross = document.querySelector(".cross");
+const menuBackground = document.querySelector(".menu-background");
+
+menu.addEventListener('click', () => {
+  console.log(menu);
+  menuBackground.classList.remove("inactive");
+})
+
+cross.addEventListener('click', () => {
+  menuBackground.classList.add("inactive");
+})
