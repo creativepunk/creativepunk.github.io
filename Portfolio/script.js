@@ -77,6 +77,8 @@ const darkModeToggle = document.querySelector('#chk');
 var iconColors = document.querySelectorAll(".icon-colors");
 var label = document.querySelector(".label");
 var ball = document.querySelector(".ball");
+const header = document.querySelector(".main-head");
+const menuIcon = document.querySelector(".menu-icon");
 
 const enableDarkMode = () => {
   // 1. Add the class to the body
@@ -91,6 +93,7 @@ const enableDarkMode = () => {
   //4. update toggle class
   label.classList.add("label-dark");
   ball.classList.add("ball-dark");
+
 }
 
 const disableDarkMode = () => {
@@ -105,6 +108,7 @@ const disableDarkMode = () => {
 
   label.classList.remove("label-dark");
   ball.classList.remove("ball-dark");
+
 }
  
 // If the user already visited and enabled darkMode
@@ -142,3 +146,5 @@ menu.addEventListener('click', () => {
 cross.addEventListener('click', () => {
   menuBackground.classList.add("inactive");
 })
+
+

@@ -57,18 +57,18 @@ h4 {
 nav {
   min-height: 10vh;
    padding: 2rem 0;
-   width: 90vw;
-  //  background: green;
-   margin: auto;
+   margin-left: 6.3rem;
+   margin-right: 6.3rem;
    display: flex;
    justify-content: space-between;
    align-items: center;
 }
 nav .nav-left {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: auto;
   align-items: center;
+  flex-grow: 5;
 }
 
 nav .logo {
@@ -168,8 +168,8 @@ nav h5 {
 
 .hero {
   position: relative;
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    // margin: auto;
     // background: rgb(255, 109, 109);
     display: flex;
     justify-content: space-between;
@@ -177,6 +177,7 @@ nav h5 {
 }
 
 .hero .left {
+  margin-left: 6.3rem;
   width: 40%;
   height: 90vh;
   // background: lightcyan;
@@ -305,6 +306,7 @@ width: 100%;
 .right{
   width: 60%;
   height: 90vh;
+  margin-right: 6.3rem;
   // background: lightgreen;
   padding: 5rem 0;
   overflow: hidden;
@@ -389,7 +391,7 @@ width: 100%;
 .hero .right .box {
   width: 2rem;
   height: 2rem;
-  background: black;
+  background: var(--primary-color);
 }
 
 
@@ -397,14 +399,63 @@ width: 100%;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.3s ease;
 }
 
 
 .cards1 {
-  min-height: 40rem;
+  min-height: 50rem;
   background: white;
   box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5rem);
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
+
+.cards1 .project-info{
+  background: var(--highlight-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  transition: all 0.3s ease;
+
+  & .project-name{
+    flex: 1 1 2rem;
+  }
+
+  & .tags{
+    flex: 4 1 2rem;
+    font-weight: 100;
+  }
+
+  & .info-bottom{
+    flex: 1 1 1rem;
+    position: relative;
+  }
+}
+.info-bottom::before{
+  content: '';
+  width: 100%;
+  height: 0.2rem;
+  border-bottom: 1px solid var(--secondary-color);
+  position: absolute;
+  top: -1rem;
+}
+.cards1 .project-info .info-bottom{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+
 .cards2 {
   min-height: 40rem;
   background: rgb(255, 159, 159);
@@ -426,15 +477,18 @@ width: 100%;
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 643px) {
   h1 {
     font-size: 3rem;
   }
   h3{
-    font-size: 1.2rem;
+    font-size: 4vw;
   }
   h4{
-    font-size: 1.2rem;
+    font-size: 3vw;
+  }
+  h5,p{
+    font-size: 3vw;
   }
   .main-head{
     position: sticky;
@@ -444,6 +498,13 @@ width: 100%;
   }
   .main-head .logo{
     display: none;
+  }
+  .theme-toggle{
+    display: none;
+  }
+  nav{
+    margin-left: 3.7rem;
+    margin-right: 3.7rem;
   }
   nav h5{
     margin: 0;
@@ -464,9 +525,7 @@ width: 100%;
       width: 2rem;
     }
   }
-  .main-head .theme-toggle{
-    display: none;
-  }
+  
 
   .menu-background.inactive{
     display: none;
@@ -520,9 +579,8 @@ width: 100%;
 
   .hero {
       position: fixed;
-      top: 12vh;
+      top: 13vh;
       width: 100%;
-      margin: auto;
       // background: rgb(255, 109, 109);
       display: grid;
       grid-template-columns: 1fr;
@@ -533,18 +591,20 @@ width: 100%;
     justify-content: center;
     align-items: center;
     height: 10rem;
-    width: 90%;
-    margin: auto;
-    padding: 0;
+    width: 100%;
+    margin: 0;
+    padding-left: 3.7rem;
+    padding-right: 3.7rem;
     // background: lightblue;
   }
   .hero .right{
     width: 100%;
-    // background: green;
-    width: 90%;
     height: 75vh;
-    margin: auto;
-    padding: 0;
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3.7rem;
+    padding-right: 3.7rem;
   }
   .hero .right .boxes{
     display: none;
@@ -563,7 +623,7 @@ width: 100%;
     display: none;
   }
   .sec-nav{
-    justify-content: space-between;
+    justify-content: space-jk;
   }
   .sec-nav h5{
     font-size: 1.2rem;
@@ -571,5 +631,13 @@ width: 100%;
   .sec-nav button {
     margin-right: 2rem;
   }
- 
+  .cards1, .cards2{
+    min-height: 35rem;
+  }
+  .cards1 .project-info{
+    height: 40%;
+  }
+ .gallery1{
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+ }
 }

@@ -62,8 +62,8 @@ h4 {
 nav {
   min-height: 10vh;
   padding: 2rem 0;
-  width: 90vw;
-  margin: auto;
+  margin-left: 6.3rem;
+  margin-right: 6.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,13 +79,16 @@ nav .nav-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
 }
 
 nav .logo {
@@ -195,8 +198,7 @@ nav h5 {
 /*Hero section left*/
 .hero {
   position: relative;
-  width: 90%;
-  margin: auto;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,6 +211,7 @@ nav h5 {
 }
 
 .hero .left {
+  margin-left: 6.3rem;
   width: 40%;
   height: 90vh;
   display: -webkit-box;
@@ -372,6 +375,7 @@ nav h5 {
 .right {
   width: 60%;
   height: 90vh;
+  margin-right: 6.3rem;
   padding: 5rem 0;
   overflow: hidden;
 }
@@ -480,7 +484,7 @@ nav h5 {
 .hero .right .box {
   width: 2rem;
   height: 2rem;
-  background: black;
+  background: var(--primary-color);
 }
 
 .gallery img {
@@ -488,13 +492,80 @@ nav h5 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .cards1 {
-  min-height: 40rem;
+  min-height: 50rem;
   background: white;
   -webkit-box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
           box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.cards1 .project-info {
+  background: var(--highlight-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cards1 .project-info .project-name {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 2rem;
+          flex: 1 1 2rem;
+}
+
+.cards1 .project-info .tags {
+  -webkit-box-flex: 4;
+      -ms-flex: 4 1 2rem;
+          flex: 4 1 2rem;
+  font-weight: 100;
+}
+
+.cards1 .project-info .info-bottom {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 1rem;
+          flex: 1 1 1rem;
+  position: relative;
+}
+
+.info-bottom::before {
+  content: '';
+  width: 100%;
+  height: 0.2rem;
+  border-bottom: 1px solid var(--secondary-color);
+  position: absolute;
+  top: -1rem;
+}
+
+.cards1 .project-info .info-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .cards2 {
@@ -515,15 +586,18 @@ nav h5 {
   left: 10px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 643px) {
   h1 {
     font-size: 3rem;
   }
   h3 {
-    font-size: 1.2rem;
+    font-size: 4vw;
   }
   h4 {
-    font-size: 1.2rem;
+    font-size: 3vw;
+  }
+  h5, p {
+    font-size: 3vw;
   }
   .main-head {
     position: -webkit-sticky;
@@ -534,6 +608,13 @@ nav h5 {
   }
   .main-head .logo {
     display: none;
+  }
+  .theme-toggle {
+    display: none;
+  }
+  nav {
+    margin-left: 3.7rem;
+    margin-right: 3.7rem;
   }
   nav h5 {
     margin: 0;
@@ -558,9 +639,6 @@ nav h5 {
   }
   .main-head .menu img {
     width: 2rem;
-  }
-  .main-head .theme-toggle {
-    display: none;
   }
   .menu-background.inactive {
     display: none;
@@ -620,9 +698,8 @@ nav h5 {
   }
   .hero {
     position: fixed;
-    top: 12vh;
+    top: 13vh;
     width: 100%;
-    margin: auto;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
@@ -641,16 +718,19 @@ nav h5 {
         -ms-flex-align: center;
             align-items: center;
     height: 10rem;
-    width: 90%;
-    margin: auto;
-    padding: 0;
+    width: 100%;
+    margin: 0;
+    padding-left: 3.7rem;
+    padding-right: 3.7rem;
   }
   .hero .right {
     width: 100%;
-    width: 90%;
     height: 75vh;
-    margin: auto;
-    padding: 0;
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3.7rem;
+    padding-right: 3.7rem;
   }
   .hero .right .boxes {
     display: none;
@@ -668,15 +748,25 @@ nav h5 {
     display: none;
   }
   .sec-nav {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: space-jk;
+        -ms-flex-pack: space-jk;
+            justify-content: space-jk;
   }
   .sec-nav h5 {
     font-size: 1.2rem;
   }
   .sec-nav button {
     margin-right: 2rem;
+  }
+  .cards1, .cards2 {
+    min-height: 35rem;
+  }
+  .cards1 .project-info {
+    height: 40%;
+  }
+  .gallery1 {
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
 }
 /*# sourceMappingURL=style.css.map */
