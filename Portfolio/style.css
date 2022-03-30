@@ -405,27 +405,13 @@ nav h5 {
   position: relative;
 }
 
-.sec-nav button .underline1 {
+.sec-nav button .underline1, .underline2, .underline3, .underline4 {
   width: 0;
   height: 2px;
   display: block;
   border-bottom: 2px solid var(--primary-color);
   position: absolute;
   bottom: -1rem;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.sec-nav button .underline2 {
-  width: 0;
-  height: 2px;
-  display: block;
-  border-bottom: 2px solid var(--primary-color);
-  position: absolute;
-  bottom: -1rem;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  transform-box: fill-box;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -444,21 +430,11 @@ nav h5 {
   padding-top: 1rem;
 }
 
-.gallery1 {
+.gallery1, .gallery2, .gallery3, .gallery4 {
   width: 100%;
   overflow: auto;
   -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
-  display: none;
-}
-
-.gallery2 {
-  width: 100%;
-  overflow: auto;
-  -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   display: none;
@@ -484,6 +460,7 @@ nav h5 {
 .hero .right .box {
   width: 2rem;
   height: 2rem;
+  border-radius: 0.1rem;
   background: var(--primary-color);
 }
 
@@ -587,13 +564,6 @@ nav h5 {
   display: flex;
 }
 
-.cards2 {
-  min-height: 40rem;
-  background: #ff9f9f;
-  -webkit-box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5), 0 5px 15px rgba(128, 128, 128, 0.5);
-          box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5), 0 5px 15px rgba(128, 128, 128, 0.5);
-}
-
 ::-webkit-scrollbar {
   width: 0.4rem;
 }
@@ -619,8 +589,7 @@ nav h5 {
     font-size: 3vw;
   }
   .main-head {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     width: 100%;
     z-index: 99;
     background: white;
@@ -670,7 +639,7 @@ nav h5 {
     -webkit-box-shadow: 0 2px 5px rgba(105, 105, 105, 0.3);
             box-shadow: 0 2px 5px rgba(105, 105, 105, 0.3);
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     position: absolute;
     top: 0;
     z-index: 3;
@@ -711,40 +680,58 @@ nav h5 {
     margin: 2rem;
   }
   .menu-background .follow {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 2rem;
-            flex: 1 1 2rem;
-  }
-  .hero {
-    position: fixed;
-    top: 13vh;
-    width: 100%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 10rem auto;
-        grid-template-rows: 10rem auto;
-  }
-  .hero .left {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 10rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 2rem;
+            flex: 1 1 2rem;
+  }
+  .menu-background .follow img {
+    margin: 1rem;
+  }
+  .hero {
+    position: relative;
+    top: 13vh;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero .left {
+    display: block;
+    height: auto;
     width: 100%;
     margin: 0;
     padding-left: 3.7rem;
     padding-right: 3.7rem;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .hero .right {
     width: 100%;
-    height: 75vh;
+    height: auto;
     margin: 0;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -756,6 +743,10 @@ nav h5 {
   }
   .hero .left .main-text {
     width: 100%;
+    position: relative;
+    height: auto;
+    left: 0;
+    top: 0;
   }
   .hero .left .main-text h3 {
     margin: 0;
@@ -767,9 +758,9 @@ nav h5 {
     display: none;
   }
   .sec-nav {
-    -webkit-box-pack: space-jk;
-        -ms-flex-pack: space-jk;
-            justify-content: space-jk;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .sec-nav h5 {
     font-size: 1.2rem;
@@ -777,7 +768,7 @@ nav h5 {
   .sec-nav button {
     margin-right: 2rem;
   }
-  .cards1, .cards2 {
+  .cards1 {
     min-height: 35rem;
   }
   .cards1 .project-info {
@@ -786,6 +777,12 @@ nav h5 {
   .gallery1 {
     -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    overflow: inherit;
+  }
+  .gallery2 {
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    overflow: inherit;
   }
 }
 /*# sourceMappingURL=style.css.map */
