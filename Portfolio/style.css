@@ -629,17 +629,17 @@ nav h5 {
     width: 2rem;
   }
   .menu-background.inactive {
-    display: none;
-    width: 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: all 0.4s cubic-bezier(0, 0.56, 0.47, 0.98);
+    transition: all 0.4s cubic-bezier(0, 0.56, 0.47, 0.98);
   }
   .menu-background {
     background: white;
     -webkit-box-shadow: 0 2px 5px rgba(105, 105, 105, 0.3);
             box-shadow: 0 2px 5px rgba(105, 105, 105, 0.3);
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     position: absolute;
     top: 0;
     z-index: 3;
@@ -653,6 +653,10 @@ nav h5 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: all 0.4s cubic-bezier(1, 0, 1, 0.57);
+    transition: all 0.4s cubic-bezier(1, 0, 1, 0.57);
   }
   .menu-background .cross {
     width: 100vw;

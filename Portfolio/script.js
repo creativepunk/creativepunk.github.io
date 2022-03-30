@@ -170,12 +170,12 @@ var cross = document.querySelector(".cross");
 const menuBackground = document.querySelector(".menu-background");
 
 menu.addEventListener('click', () => {
-  console.log(menu);
-  menuBackground.classList.remove("inactive");
+  // console.log(menu);
+  menuBackground.classList.add("inactive");
 })
 
 cross.addEventListener('click', () => {
-  menuBackground.classList.add("inactive");
+  menuBackground.classList.remove("inactive");
 })
 
 
