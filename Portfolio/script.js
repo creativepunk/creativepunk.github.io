@@ -46,56 +46,7 @@ function erase() {
 
 /*Gallery tabs*/
 
-var gallery1 = document.querySelector(".gallery1");
-var gallery2 = document.querySelector(".gallery2");
-var gallery3 = document.querySelector(".gallery3");
-var gallery4 = document.querySelector(".gallery4");
 
-var underline1 = document.querySelector(".underline1");
-var underline2 = document.querySelector(".underline2");
-var underline3 = document.querySelector(".underline3");
-var underline4 = document.querySelector(".underline4");
-
-function showGallery1() {
-  gallery1.style.display = "grid";
-  gallery2.style.display = "none";
-  gallery3.style.display = "none";
-  gallery4.style.display = "none";
-  underline1.style.width = "100%";
-  underline2.style.width = "0%";
-  underline3.style.width = "0%";
-  underline4.style.width = "0%";
-}
-function showGallery2() {
-  gallery1.style.display = "none";
-  gallery2.style.display = "grid";
-  gallery3.style.display = "none";
-  gallery4.style.display = "none";
-  underline1.style.width = "0%";
-  underline2.style.width = "100%";
-  underline3.style.width = "0%";
-  underline4.style.width = "0%";
-}
-function showGallery3() {
-  gallery1.style.display = "none";
-  gallery2.style.display = "none";
-  gallery3.style.display = "grid";
-  gallery4.style.display = "none";
-  underline1.style.width = "0%";
-  underline2.style.width = "0%";
-  underline3.style.width = "100%";
-  underline4.style.width = "0%";
-}
-function showGallery4() {
-  gallery1.style.display = "none";
-  gallery2.style.display = "none";
-  gallery3.style.display = "none";
-  gallery4.style.display = "grid";
-  underline1.style.width = "0%";
-  underline2.style.width = "0%";
-  underline3.style.width = "0%";
-  underline4.style.width = "100%";
-}
 
 // showGallery1();
 

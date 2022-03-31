@@ -131,7 +131,7 @@
         <div class="gallery-space">
           <div class="sec-nav">
             <button onclick="showGallery1()">
-              <h5 class="btn1">Interaction Design</h5>
+              <h5 class="btn1">3D Renders</h5>
               <div class="underline1"></div>
             </button>
             <button onclick="showGallery2()">
@@ -425,7 +425,6 @@
                 </div>
               </a>
 
-
               <a href="#" class="cards1">
                 <img src="./images/Image 24.jpg" alt="" />
                 <div class="project-info">
@@ -451,8 +450,6 @@
                   </div>
                 </div>
               </a>
-
-              
             </div>
             <div class="boxes">
               <div class="box"></div>
@@ -465,7 +462,25 @@
 
     <script src="./script.js"></script>
     <script>
-      showGallery1();
+      var gallery1 = document.querySelector(".gallery1");
+      var gallery2 = document.querySelector(".gallery2");
+
+      var underline1 = document.querySelector(".underline1");
+      var underline2 = document.querySelector(".underline2");
+
+      function showGallery1() {
+        gallery1.style.display = "grid";
+        gallery2.style.display = "none";
+        underline1.style.width = "100%";
+        underline2.style.width = "0%";
+      }
+      function showGallery2() {
+        gallery1.style.display = "none";
+        gallery2.style.display = "grid";
+        underline1.style.width = "0%";
+        underline2.style.width = "100%";
+      }
+            showGallery1();
     </script>
   </body>
 </html>

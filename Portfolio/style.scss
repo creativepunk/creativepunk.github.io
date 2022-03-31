@@ -478,7 +478,7 @@ width: 100%;
     font-size: 3vw;
   }
   h5,p{
-    font-size: 3vw;
+    font-size: 1.2rem;
   }
   .main-head{
     position: fixed;
@@ -646,4 +646,11 @@ width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   overflow: inherit;
  }
+}
+
+@media (min-width: 1700px) {
+  .gallery1{
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    overflow: inherit;
+   }
 }

@@ -586,7 +586,7 @@ nav h5 {
     font-size: 3vw;
   }
   h5, p {
-    font-size: 3vw;
+    font-size: 1.2rem;
   }
   .main-head {
     position: fixed;
@@ -786,6 +786,14 @@ nav h5 {
   .gallery2 {
     -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    overflow: inherit;
+  }
+}
+
+@media (min-width: 1700px) {
+  .gallery1 {
+    -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     overflow: inherit;
   }
 }
