@@ -362,7 +362,6 @@ width: 100%;
 }
 
 
-
 .hero .right .boxes {
   height: auto;
   display: flex;
@@ -465,7 +464,45 @@ width: 100%;
   left: 10px;
 }
 
+.popup{
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  height: 100vh;
+  overflow: auto;
+}
+.popupitems{
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 3rem;
+  position: relative;
+  & img{
+    width: 100%;    
+  }
+}
+.olx{
+  display: none;
+}
 
+.test{
+  display: none;
+}
+.close {
+  position: absolute;
+  right: 0;
+  width: 2rem;
+  margin: 2.5rem;
+  cursor: pointer;
+}
+.close:hover, .close:focus {
+  color: #0e0e0e;
+  cursor: pointer;
+}
 
 @media (max-width: 643px) {
   h1 {
@@ -649,8 +686,8 @@ width: 100%;
 }
 
 @media (min-width: 1700px) {
-  .gallery1{
+  .gallery1, .gallery2, .gallery3, .gallery4{
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-    overflow: inherit;
+    overflow: auto;
    }
 }

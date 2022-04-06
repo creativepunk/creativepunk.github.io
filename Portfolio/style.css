@@ -575,6 +575,51 @@ nav h5 {
   left: 10px;
 }
 
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  overflow: auto;
+}
+
+.popupitems {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.popupitems img {
+  width: 100%;
+}
+
+.olx {
+  display: none;
+}
+
+.test {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  width: 2rem;
+  margin: 2.5rem;
+  cursor: pointer;
+}
+
+.close:hover, .close:focus {
+  color: #0e0e0e;
+  cursor: pointer;
+}
+
 @media (max-width: 643px) {
   h1 {
     font-size: 3rem;
@@ -791,10 +836,10 @@ nav h5 {
 }
 
 @media (min-width: 1700px) {
-  .gallery1 {
+  .gallery1, .gallery2, .gallery3, .gallery4 {
     -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-    overflow: inherit;
+    overflow: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

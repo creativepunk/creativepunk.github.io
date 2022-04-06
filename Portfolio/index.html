@@ -131,17 +131,68 @@
         <div class="gallery-space">
           <div class="sec-nav">
             <button onclick="showGallery1()">
-              <h5 class="btn1">Interaction Design</h5>
+              <h5 class="btn1">Interaction Design (6)</h5>
               <div class="underline1"></div>
             </button>
             <button onclick="showGallery2()">
-              <h5 class="btn2">Industrial Design</h5>
+              <h5 class="btn2">Industrial Design (8)</h5>
               <div class="underline2"></div>
             </button>
           </div>
           <div class="line1"></div>
           <div class="gallery">
+            <!------------Interaction gallery----------------->
             <div class="gallery1">
+              <a id="btn1" href="#" class="cards1">
+                <img src="./images/olx_cover.png" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Redesign of Olx Service to tackle online fraud
+                  </h5>
+                  <p class="description">
+                    How to tackle frauds that occur through classified ads
+                    posted in olx by tweaking the service provided by olx
+                    presently.
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    UX Research, UX Design, Classified Ads
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Personal Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2021</p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="cards1">
+                <img src="./images/Image 24.jpg" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Redesign of Olx Service to tackle online fraud
+                  </h5>
+                  <p class="description">
+                    How to tackle frauds that occur through classified ads
+                    posted in olx by tweaking the service provided by olx
+                    presently.
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    UX Research, UX Design, Classified Ads
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Personal Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2021</p>
+                  </div>
+                </div>
+              </a>
               <a href="#" class="cards1">
                 <img src="./images/Image 24.jpg" alt="" />
                 <div class="project-info">
@@ -293,7 +344,9 @@
                 </div>
               </a>
             </div>
-
+              <!-------------------------------------------------->
+              <!-------------------------------------------------->
+              <!------------Industrial Design gallery----------------->
             <div class="gallery2">
               <a href="#" class="cards1">
                 <img src="./images/Image 24.jpg" alt="" />
@@ -450,6 +503,56 @@
                   </div>
                 </div>
               </a>
+              <a href="#" class="cards1">
+                <img src="./images/Image 24.jpg" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Redesign of Olx Service to tackle online fraud
+                  </h5>
+                  <p class="description">
+                    How to tackle frauds that occur through classified ads
+                    posted in olx by tweaking the service provided by olx
+                    presently.
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    UX Research, UX Design, Classified Ads
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Personal Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2021</p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="cards1">
+                <img src="./images/Image 24.jpg" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Redesign of Olx Service to tackle online fraud
+                  </h5>
+                  <p class="description">
+                    How to tackle frauds that occur through classified ads
+                    posted in olx by tweaking the service provided by olx
+                    presently.
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    UX Research, UX Design, Classified Ads
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Personal Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2021</p>
+                  </div>
+                </div>
+              </a>
             </div>
             <div class="boxes">
               <div class="box"></div>
@@ -457,6 +560,15 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="popup">
+      <div class="popupitems">
+        <span class="close">
+          <img src="./icons/cross.svg" alt="">
+        </span>
+        <img class="olx" src="./images/olx.png" alt="">
+        <img class="test" src="./images/test.png" alt="">
       </div>
     </section>
 
@@ -481,6 +593,24 @@
         underline2.style.width = "100%";
       }
             showGallery1();
+
+      var popUp = document.querySelector(".popup");
+      var olx = document.querySelector(".olx");
+      var btn = document.querySelector("#btn1");
+      var span = document.querySelector(".close");
+      btn.addEventListener("click", () => {
+          popUp.style.display = "block";
+          olx.style.display = "block";
+      });
+      span.addEventListener("click", () => {
+          popUp.style.display = "none";
+      });
+      window.onclick = function(event) {
+          if (event.target == popUp) {
+            popUp.style.display = "none";
+            olx.style.display = "none";
+          }
+      };
     </script>
   </body>
 </html>
