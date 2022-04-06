@@ -585,12 +585,14 @@
         gallery2.style.display = "none";
         underline1.style.width = "100%";
         underline2.style.width = "0%";
+        gallery1.scrollTo(0, 0);
       }
       function showGallery2() {
         gallery1.style.display = "none";
         gallery2.style.display = "grid";
         underline1.style.width = "0%";
         underline2.style.width = "100%";
+        gallery2.scrollTo(0, 0);
       }
             showGallery1();
 
@@ -604,13 +606,16 @@
       });
       span.addEventListener("click", () => {
           popUp.style.display = "none";
+          popUp.scrollTo(0, 0);
       });
       window.onclick = function(event) {
           if (event.target == popUp) {
             popUp.style.display = "none";
             olx.style.display = "none";
+            popUp.scrollTo(0, 0);
           }
       };
+    
     </script>
   </body>
 </html>

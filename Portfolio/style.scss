@@ -51,7 +51,6 @@ h4 {
 /*Header section*/
 
 .main-head {
-  // background: red;
   top: 0;
 }
 nav {
@@ -169,8 +168,6 @@ nav h5 {
 .hero {
   position: relative;
     width: 100%;
-    // margin: auto;
-    // background: rgb(255, 109, 109);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -180,7 +177,6 @@ nav h5 {
   margin-left: 6.3rem;
   width: 40%;
   height: 90vh;
-  // background: lightcyan;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -307,7 +303,6 @@ width: 100%;
   width: 60%;
   height: 90vh;
   margin-right: 6.3rem;
-  // background: lightgreen;
   padding: 5rem 0;
   overflow: hidden;
   
@@ -383,6 +378,11 @@ width: 100%;
   height: 100%;
   object-fit: cover;
   transition: all 0.3s ease;
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; 
 }
 
 
@@ -406,7 +406,6 @@ width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // transform: translateY(40%);
   transition: all 0.3s ease;
 
   & .project-name{
@@ -442,7 +441,6 @@ width: 100%;
 }
 
 .cards1:hover .project-info{
-  // transform: translateY(0);
   height: 60%;
 }
 .cards1:hover .description{
@@ -482,7 +480,12 @@ width: 100%;
   margin-top: 3rem;
   position: relative;
   & img{
-    width: 100%;    
+    width: 100%;
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;     
   }
 }
 .olx{
@@ -493,9 +496,11 @@ width: 100%;
   display: none;
 }
 .close {
+  border-radius: 100vh;
   position: absolute;
   right: 0;
   width: 2rem;
+  top: 0;
   margin: 2.5rem;
   cursor: pointer;
 }
@@ -504,7 +509,7 @@ width: 100%;
   cursor: pointer;
 }
 
-@media (max-width: 643px) {
+@media (max-width: 900px) {
   h1 {
     font-size: 3rem;
   }
@@ -614,7 +619,6 @@ width: 100%;
       top: 13vh;
       bottom: 0;
       width: 100%;
-      // background: rgb(255, 109, 109);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -629,7 +633,6 @@ width: 100%;
     padding-right: 3.7rem;
     padding-top: 0;
     padding-bottom: 0;
-    // background: lightblue;
   }
   .hero .right{
     width: 100%;

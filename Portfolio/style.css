@@ -471,6 +471,14 @@ nav h5 {
      object-fit: cover;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .cards1 {
@@ -597,6 +605,14 @@ nav h5 {
 
 .popupitems img {
   width: 100%;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .olx {
@@ -608,9 +624,11 @@ nav h5 {
 }
 
 .close {
+  border-radius: 100vh;
   position: absolute;
   right: 0;
   width: 2rem;
+  top: 0;
   margin: 2.5rem;
   cursor: pointer;
 }
@@ -620,7 +638,7 @@ nav h5 {
   cursor: pointer;
 }
 
-@media (max-width: 643px) {
+@media (max-width: 900px) {
   h1 {
     font-size: 3rem;
   }
