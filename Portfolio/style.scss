@@ -431,6 +431,22 @@ width: 100%;
     justify-content: space-between;
   }
 }
+.project-no{
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  border-radius: 100vh;
+  background: rgb(240, 240, 240);
+  text-align: center;
+  box-shadow: 0px 1px 2px gray;
+  // border: 2px solid black;
+   & p{
+     width: 2rem;
+     font-size: 1rem;
+     color: black;
+   }
+}
 .info-bottom::before{
   content: '';
   width: 100%;
@@ -676,7 +692,7 @@ width: 100%;
     min-height: 35rem;
   }
   .cards1 .project-info{
-    height: 40%;
+    height: 30%;
   }
  .gallery1{
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -685,6 +701,10 @@ width: 100%;
  .gallery2{
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   overflow: inherit;
+ }
+
+ .project-no{
+   display: block;
  }
 }
 

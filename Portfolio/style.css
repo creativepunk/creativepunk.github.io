@@ -549,6 +549,24 @@ nav h5 {
           justify-content: space-between;
 }
 
+.project-no {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  border-radius: 100vh;
+  background: #f0f0f0;
+  text-align: center;
+  -webkit-box-shadow: 0px 1px 2px gray;
+          box-shadow: 0px 1px 2px gray;
+}
+
+.project-no p {
+  width: 2rem;
+  font-size: 1rem;
+  color: black;
+}
+
 .info-bottom::before {
   content: '';
   width: 100%;
@@ -839,7 +857,7 @@ nav h5 {
     min-height: 35rem;
   }
   .cards1 .project-info {
-    height: 40%;
+    height: 30%;
   }
   .gallery1 {
     -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
@@ -850,6 +868,9 @@ nav h5 {
     -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     overflow: inherit;
+  }
+  .project-no {
+    display: block;
   }
 }
 
