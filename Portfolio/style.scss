@@ -8,6 +8,7 @@
   --primary-color: rgb(0, 0, 0);
   --secondary-color: #f6f6f6;
   --highlight-color: rgb(255, 0, 0);
+  --highlight-color-alpha: rgba(255, 0, 0, 0.8);
 }
 .light-theme {
   --primary-color: rgb(255, 255, 255);
@@ -21,8 +22,7 @@ html {
 body {
   background: var(--secondary-color);
 }
-a,
-h5 {
+p, h5 {
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
@@ -224,9 +224,9 @@ nav h5 {
   & .circle {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 5rem;
-    height: 5rem;
+    left: 0.4rem;
+    width: 4rem;
+    height: 4rem;
     border: 1px solid var(--highlight-color);
     border-radius: 100vh;
     z-index: -1;
@@ -235,9 +235,9 @@ nav h5 {
   & .current-circle {
     position: absolute;
     top: 0rem;
-    left: 0;
+    left: 0.4rem;
     width: 16rem;
-    height: 5rem;
+    height: 4rem;
     border: 1px solid var(--highlight-color);
     border-radius: 2.5rem;
     z-index: -1;
@@ -259,7 +259,7 @@ width: 100%;
   justify-content: start;
   align-items: center;
   width: auto;
-  height: 5rem;
+  height: 4rem;
   margin-left: 1rem;
 }
 .hero .left .main-nav h5 {
@@ -328,9 +328,9 @@ width: 100%;
 }
 .sec-nav button .underline1, .underline2, .underline3, .underline4 {
   width: 0;
-  height: 2px;
+  height: 4px;
   display: block;
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 4px solid var(--primary-color);
   position: absolute;
   bottom: -1rem;
   transition: all 0.3s ease-in-out;
@@ -378,35 +378,42 @@ width: 100%;
   height: 100%;
   object-fit: cover;
   transition: all 0.3s ease;
-  image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering: -moz-crisp-edges;         /* Firefox */
     image-rendering:   -o-crisp-edges;         /* Opera */
     image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
     image-rendering: crisp-edges;
     -ms-interpolation-mode: nearest-neighbor; 
 }
-
+.gallery video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .cards1 {
   min-height: 40rem;
-  background: white;
-  box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5rem);
+  // background: white;
+  box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5rem);
   position: relative;
   transition: all 0.3s ease;
+  border-radius: 0.2rem;
   overflow: hidden;
 }
 
 .cards1 .project-info{
-  background: var(--highlight-color);
+  background-color: var(--highlight-color);
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 30%;
+  height: 60%;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transform: translateY(70%);
   transition: all 0.3s ease;
+  pointer-events: none;
 
   & .project-name{
     flex: 1 1 2rem;
@@ -426,27 +433,12 @@ width: 100%;
   & .info-bottom{
     flex: 1 1 1rem;
     position: relative;
-    display: none; 
+    display: flex; 
     width: 100%;
     justify-content: space-between;
   }
 }
-.project-no{
-  display: none;
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  border-radius: 100vh;
-  background: rgb(240, 240, 240);
-  text-align: center;
-  box-shadow: 0px 1px 2px gray;
-  // border: 2px solid black;
-   & p{
-     width: 2rem;
-     font-size: 1rem;
-     color: black;
-   }
-}
+
 .info-bottom::before{
   content: '';
   width: 100%;
@@ -457,13 +449,11 @@ width: 100%;
 }
 
 .cards1:hover .project-info{
-  height: 60%;
+  transform: translateY(0);
+  pointer-events: none;
 }
 .cards1:hover .description{
   display: block;
-}
-.cards1:hover .info-bottom{
-  display: flex;
 }
 
 
@@ -485,29 +475,32 @@ width: 100%;
   left: 0;
   top: 0;
   width: 100%;
-  background-color: rgba($color: #000000, $alpha: 0.6);
+  background-color: rgba($color: #000000, $alpha: 0.5);
   height: 100vh;
   overflow: auto;
+  backdrop-filter: blur(5px);
 }
 .popupitems{
   width: 90%;
   max-width: 1400px;
   margin: auto;
   margin-top: 3rem;
+  margin-bottom: 3rem;
   position: relative;
-  & img{
-    width: 100%;
-    image-rendering: -moz-crisp-edges;         /* Firefox */
-    image-rendering:   -o-crisp-edges;         /* Opera */
-    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor;     
-  }
-}
-.olx{
-  display: none;
+  
 }
 
+.popup .popupitems img{ 
+  width: 100%;
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering:   -o-crisp-edges;         /* Opera */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;     
+}
+.popup .popupitems .project_main{ 
+display: none;
+}
 .test{
   display: none;
 }
@@ -535,7 +528,7 @@ width: 100%;
   h4{
     font-size: 3vw;
   }
-  h5,p{
+  h5, p{
     font-size: 1.2rem;
   }
   .main-head{
@@ -599,6 +592,7 @@ width: 100%;
       flex: 1 1 2rem;
       margin: 1rem;
       text-align: end;
+      cursor: pointer;
       
       & img{
         margin: 2rem;
@@ -692,7 +686,8 @@ width: 100%;
     min-height: 35rem;
   }
   .cards1 .project-info{
-    height: 30%;
+    height: 100%;
+    pointer-events: none;
   }
  .gallery1{
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -703,9 +698,6 @@ width: 100%;
   overflow: inherit;
  }
 
- .project-no{
-   display: block;
- }
 }
 
 @media (min-width: 1700px) {

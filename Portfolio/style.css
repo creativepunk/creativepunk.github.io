@@ -9,6 +9,7 @@
   --primary-color: rgb(0, 0, 0);
   --secondary-color: #f6f6f6;
   --highlight-color: rgb(255, 0, 0);
+  --highlight-color-alpha: rgba(255, 0, 0, 0.8);
 }
 
 .light-theme {
@@ -25,8 +26,7 @@ body {
   background: var(--secondary-color);
 }
 
-a,
-h5 {
+p, h5 {
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
@@ -281,9 +281,9 @@ nav h5 {
 .hero .left .main-nav .circle {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 5rem;
-  height: 5rem;
+  left: 0.4rem;
+  width: 4rem;
+  height: 4rem;
   border: 1px solid var(--highlight-color);
   border-radius: 100vh;
   z-index: -1;
@@ -292,9 +292,9 @@ nav h5 {
 .hero .left .main-nav .current-circle {
   position: absolute;
   top: 0rem;
-  left: 0;
+  left: 0.4rem;
   width: 16rem;
-  height: 5rem;
+  height: 4rem;
   border: 1px solid var(--highlight-color);
   border-radius: 2.5rem;
   z-index: -1;
@@ -321,7 +321,7 @@ nav h5 {
       -ms-flex-align: center;
           align-items: center;
   width: auto;
-  height: 5rem;
+  height: 4rem;
   margin-left: 1rem;
 }
 
@@ -407,9 +407,9 @@ nav h5 {
 
 .sec-nav button .underline1, .underline2, .underline3, .underline4 {
   width: 0;
-  height: 2px;
+  height: 4px;
   display: block;
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 4px solid var(--primary-color);
   position: absolute;
   bottom: -1rem;
   -webkit-transition: all 0.3s ease-in-out;
@@ -481,24 +481,31 @@ nav h5 {
   -ms-interpolation-mode: nearest-neighbor;
 }
 
+.gallery video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .cards1 {
   min-height: 40rem;
-  background: white;
-  -webkit-box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
-          box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
+  -webkit-box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5);
+          box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5);
   position: relative;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  border-radius: 0.2rem;
   overflow: hidden;
 }
 
 .cards1 .project-info {
-  background: var(--highlight-color);
+  background-color: var(--highlight-color);
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 30%;
+  height: 60%;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -510,8 +517,11 @@ nav h5 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transform: translateY(70%);
+          transform: translateY(70%);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 .cards1 .project-info .project-name {
@@ -542,29 +552,13 @@ nav h5 {
       -ms-flex: 1 1 1rem;
           flex: 1 1 1rem;
   position: relative;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.project-no {
-  display: none;
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  border-radius: 100vh;
-  background: #f0f0f0;
-  text-align: center;
-  -webkit-box-shadow: 0px 1px 2px gray;
-          box-shadow: 0px 1px 2px gray;
-}
-
-.project-no p {
-  width: 2rem;
-  font-size: 1rem;
-  color: black;
 }
 
 .info-bottom::before {
@@ -577,17 +571,13 @@ nav h5 {
 }
 
 .cards1:hover .project-info {
-  height: 60%;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  pointer-events: none;
 }
 
 .cards1:hover .description {
   display: block;
-}
-
-.cards1:hover .info-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 ::-webkit-scrollbar {
@@ -608,9 +598,11 @@ nav h5 {
   left: 0;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
   overflow: auto;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 .popupitems {
@@ -618,10 +610,11 @@ nav h5 {
   max-width: 1400px;
   margin: auto;
   margin-top: 3rem;
+  margin-bottom: 3rem;
   position: relative;
 }
 
-.popupitems img {
+.popup .popupitems img {
   width: 100%;
   image-rendering: -moz-crisp-edges;
   /* Firefox */
@@ -633,7 +626,7 @@ nav h5 {
   -ms-interpolation-mode: nearest-neighbor;
 }
 
-.olx {
+.popup .popupitems .project_main {
   display: none;
 }
 
@@ -747,6 +740,7 @@ nav h5 {
             flex: 1 1 2rem;
     margin: 1rem;
     text-align: end;
+    cursor: pointer;
   }
   .menu-background .cross img {
     margin: 2rem;
@@ -857,7 +851,8 @@ nav h5 {
     min-height: 35rem;
   }
   .cards1 .project-info {
-    height: 30%;
+    height: 100%;
+    pointer-events: none;
   }
   .gallery1 {
     -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
@@ -868,9 +863,6 @@ nav h5 {
     -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     overflow: inherit;
-  }
-  .project-no {
-    display: block;
   }
 }
 
