@@ -490,6 +490,19 @@ nav h5 {
 
 .cards1 {
   min-height: 40rem;
+  background: white;
+  -webkit-box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5);
+          box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5);
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+
+.cards2 {
+  min-height: 40rem;
+  background: white;
   -webkit-box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5);
           box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5);
   position: relative;
@@ -561,6 +574,68 @@ nav h5 {
           justify-content: space-between;
 }
 
+.cards2 .project-info {
+  background-color: var(--highlight-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.cards2 .project-info .project-name {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 2rem;
+          flex: 1 1 2rem;
+  font-size: 1.7rem;
+}
+
+.cards2 .project-info .description {
+  -webkit-box-flex: 5;
+      -ms-flex: 5 1 2rem;
+          flex: 5 1 2rem;
+  color: var(--secondary-color);
+  font-weight: 100;
+  display: none;
+}
+
+.cards2 .project-info .tags {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 2rem;
+          flex: 1 1 2rem;
+  font-weight: 100;
+}
+
+.cards2 .project-info .info-bottom {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 1rem;
+          flex: 1 1 1rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .info-bottom::before {
   content: '';
   width: 100%;
@@ -577,6 +652,16 @@ nav h5 {
 }
 
 .cards1:hover .description {
+  display: block;
+}
+
+.cards2:hover .project-info {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  pointer-events: none;
+}
+
+.cards2:hover .description {
   display: block;
 }
 
@@ -757,6 +842,8 @@ nav h5 {
     text-decoration: none;
     font-size: 2.5rem;
     margin: 2rem;
+    font-family: "Poppins", sans-serif;
+    color: #000000;
   }
   .menu-background .follow {
     display: -webkit-box;
@@ -851,6 +938,13 @@ nav h5 {
     min-height: 35rem;
   }
   .cards1 .project-info {
+    height: 100%;
+    pointer-events: none;
+  }
+  .cards2 {
+    min-height: 35rem;
+  }
+  .cards2 .project-info {
     height: 100%;
     pointer-events: none;
   }
