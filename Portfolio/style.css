@@ -252,7 +252,7 @@ nav h5 {
   margin-bottom: 2rem;
 }
 
-.hero .left h3 .typed-text {
+.typed-text {
   color: var(--highlight-color);
 }
 
@@ -678,12 +678,12 @@ nav h5 {
 }
 
 ::-webkit-scrollbar {
-  width: 0.4rem;
+  width: 0.6rem;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 100vh;
-  background: #dddddd;
+  background: #a5a5a5;
   position: absolute;
   left: 10px;
 }
@@ -744,6 +744,182 @@ nav h5 {
 .close:hover, .close:focus {
   color: #0e0e0e;
   cursor: pointer;
+}
+
+.aboutme-space {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+  overflow-y: auto;
+  margin-top: 1rem;
+}
+
+.introduction {
+  width: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.introduction h3, .introduction p {
+  margin: 1rem 1rem 1rem 0;
+}
+
+.academics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: 100%;
+  margin-top: 4rem;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 100%;
+  margin-top: 4rem;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.head {
+  margin: 1rem 1rem 1rem 0;
+}
+
+.school {
+  width: 100%;
+  border-radius: 0.5rem;
+  background: white;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.offices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 10rem;
+  border-radius: 0.5rem;
+  background: white;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.officelogo {
+  width: 20%;
+  margin-right: 5rem;
+}
+
+.officelogo img {
+  width: 100%;
+}
+
+.officename {
+  width: 80%;
+}
+
+.profile-pic {
+  width: 100%;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -o-crisp-edges;
+  /* Opera */
+  image-rendering: -webkit-optimize-contrast;
+  /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  margin-top: 4rem;
+}
+
+.softwares {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.softwares img {
+  width: 3rem;
+  margin-right: 2rem;
 }
 
 @media (max-width: 900px) {

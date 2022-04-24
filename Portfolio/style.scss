@@ -202,10 +202,9 @@ nav h5 {
 .hero .left h3 {
   color: var(--primary-color);
   margin-bottom: 2rem;
-
-  & .typed-text {
-    color: var(--highlight-color);
-  }
+}
+.typed-text {
+  color: var(--highlight-color);
 }
 .hero .left .main-nav {
   display: flex;
@@ -522,12 +521,12 @@ width: 100%;
 
 
 ::-webkit-scrollbar {
-  width: 0.4rem;
+  width: 0.6rem;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 100vh;
-  background: rgb(221, 221, 221);
+  background: rgb(165, 165, 165);
   position: absolute;
   left: 10px;
 }
@@ -580,6 +579,121 @@ display: none;
 .close:hover, .close:focus {
   color: #0e0e0e;
   cursor: pointer;
+}
+
+
+//********** ABOUT ME **********//
+.aboutme-space{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 3rem;
+  overflow-y: auto;
+  margin-top: 1rem;
+}
+
+.introduction{
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  & h3, p {
+    margin: 1rem 1rem 1rem 0;
+  }
+}
+
+.academics{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  margin-top: 4rem;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.work{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  margin-top: 4rem;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  
+}
+
+.head{
+  margin: 1rem 1rem 1rem 0;
+}
+
+.school{
+  width: 100%;
+  border-radius: 0.5rem;
+  background: white;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+.offices{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10rem;
+  border-radius: 0.5rem;
+  background: white;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+.officelogo{
+  width: 20%;
+  margin-right: 5rem;
+  & img {
+    width: 100%;
+  }
+}
+
+.officename{
+  width: 80%;
+}
+.profile-pic {
+  width: 100%;
+  
+  grid-column: 2/3;
+  grid-row: 1/3;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; 
+  }
+}
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  margin-top: 4rem;
+}
+
+.softwares{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  & img{
+    width: 3rem;
+    
+    margin-right: 2rem;
+  }
 }
 
 @media (max-width: 900px) {
