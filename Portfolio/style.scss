@@ -587,9 +587,9 @@ display: none;
 .aboutme-space{
   width: 100%;
   height: 100%;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr;
- display: none;
+ 
   column-gap: 3rem;
   overflow-y: auto;
   margin-top: 1rem;
