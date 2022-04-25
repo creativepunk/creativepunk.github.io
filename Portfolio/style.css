@@ -746,6 +746,12 @@ nav h5 {
   cursor: pointer;
 }
 
+.rightnew {
+  width: 60%;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .aboutme-space {
   width: 100%;
   height: 100%;
