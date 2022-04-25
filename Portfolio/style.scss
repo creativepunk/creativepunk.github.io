@@ -598,6 +598,10 @@ display: none;
   width: 100%;
   grid-column: 1/2;
   grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   & h3, p {
     margin: 1rem 1rem 1rem 0;
   }
@@ -606,7 +610,7 @@ display: none;
 .academics{
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: start;
   width: 100%;
   margin-top: 4rem;
   grid-column: 1/2;
@@ -618,8 +622,6 @@ display: none;
   justify-content: start;
   width: 100%;
   margin-top: 4rem;
-  grid-column: 1/2;
-  grid-row: 3/4;
   
 }
 
@@ -658,9 +660,9 @@ display: none;
 }
 .profile-pic {
   width: 100%;
-  
+  padding-right: 1rem;
   grid-column: 2/3;
-  grid-row: 1/3;
+  grid-row: 1/2;
   & img {
     width: 100%;
     height: 100%;
@@ -678,8 +680,9 @@ display: none;
   flex-direction: column;
   width: 100%;
   grid-column: 2/3;
-  grid-row: 3/4;
+  grid-row: 2/3;
   margin-top: 4rem;
+  padding-right: 1rem;
 }
 
 .softwares{
@@ -694,6 +697,14 @@ display: none;
     margin-right: 2rem;
   }
   
+}
+.skillscard{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 900px) {
