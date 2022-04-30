@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Product Design Portfolio" />
+    <meta name="robots" content="index,follow" />
+    <title>Pushpal Dey Design | Portfolio</title>
+    <link rel="icon" href="./icons/favicon.svg" />
+    <link rel="stylesheet" href="./style.css?ver=1.8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="">
+    <header class="main-head">
+      <nav>
+        <div class="nav-left">
+          <a href="./index.html"class="logo">
+            <img src="./icons/logo.svg" alt="" class="icon-colors" />
+          </a>
+          <a href="./index.html" style="text-decoration: none;"><h5>Pushpal Dey Design</h5></a>
+        </div>
+
+        <div class="theme-toggle">
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label class="label" for="chk">
+            <div class="ball"></div>
+            <img src="./icons/sun.svg" alt="lightmode" class="sun" />
+            <img src="./icons/moon.svg" alt="darkmode" class="moon" />
+          </label>
+        </div>
+        <div class="menu">
+          <img class="menu-icon" src="./icons/menu.svg" alt="" />
+        </div>
+      </nav>
+      <div class="menu-background">
+        <div class="cross">
+          <img src="./icons/cross.svg" alt="" />
+        </div>
+        <ul>
+          <li><a href="./index.html" style="font-weight: 900;">Work</a></li>
+          <li><a href="./fun.html">Fun</a></li>
+          <li><a href="./aboutme.html">About me</a></li>
+        </ul>
+        <div class="follow">
+          <h5>Follow me at</h5>
+          <div class="social-media-icons">
+            <a href="https://www.behance.net/pushpaldey" target="_blank"
+              ><img
+                src="./icons/behance-square.svg"
+                alt=""
+                class="icon-colors"
+            /></a>
+            <a href="https://www.instagram.com/pushpaldey/" target="_blank"
+              ><img src="./icons/instagram.svg" alt="" class="icon-colors"
+            /></a>
+            <a href="https://www.linkedin.com/in/pushpaldey/" target="_blank"
+              ><img src="./icons/linkedin.svg" alt="" class="icon-colors"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="left">
+        <div class="main-text">
+          <h1>Hello!</h1>
+          <h3>I am a multidisciplinary designer based out of Mumbai</h3>
+          <h4>
+            I like to work with both
+            <span class="work-style">tangible</span> and
+            <span class="work-style">Digital Products.</span>
+          </h4>
+        </div>
+        <div class="main-nav">
+          <div class="page-container">
+            <a href="./index.html" style="text-decoration: none">
+              <div class="current-circle"></div>
+              <div class="pages">
+                <img src="./icons/work.svg" alt="" class="icon-colors" />
+                <h5>Work</h5>
+              </div>
+            </a>
+          </div>
+          <div class="page-container">
+            <a href="./fun.html" style="text-decoration: none">
+              <div class="circle"></div>
+              <div class="pages">
+                <img src="./icons/fun.svg" alt="" class="icon-colors" />
+
+                <h5>Fun</h5>
+              </div>
+            </a>
+          </div>
+          <div class="page-container">
+            <a href="./aboutme.html" style="text-decoration: none">
+              <div class="circle"></div>
+              <div class="pages">
+                <img src="./icons/hello.svg" alt="" class="icon-colors" />
+                <h5 class="current-page">About me</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="follow-at">
+          <h5>Follow me at</h5>
+          <div class="social-media-icons">
+            <a href="https://www.behance.net/pushpaldey" target="_blank"
+              ><img
+                src="./icons/behance-square.svg"
+                alt=""
+                class="icon-colors"
+            /></a>
+            <a href="https://www.instagram.com/pushpaldey/" target="_blank"
+              ><img src="./icons/instagram.svg" alt="" class="icon-colors"
+            /></a>
+            <a href="https://www.linkedin.com/in/pushpaldey/" target="_blank"
+              ><img src="./icons/linkedin.svg" alt="" class="icon-colors"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="gallery-space">
+          <div class="sec-nav">
+            <button onclick="showGallery1()">
+              <h5 class="btn1">Interaction Design (5)</h5>
+              <div class="underline1"></div>
+            </button>
+            <button onclick="showGallery2()">
+              <h5 class="btn2">Industrial Design (7)</h5>
+              <div class="underline2"></div>
+            </button>
+          </div>
+          <div class="line1"></div>
+          <div class="gallery">
+            <!------------Interaction gallery----------------->
+            <div class="gallery1">
+              <a id="btn1" href="#" class="cards1">
+                <img src="./images/clasroom_cover.png" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Online classroom App
+                  </h5>
+                  <p class="description">
+                    Understanding the various challenges faced by the teachers
+                    and conceptualizing a user friendly app.
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    UX Research, UI Design, Academics
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Assignment Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2021</p>
+                  </div>
+                </div>
+              </a>
+              <a id="btn2" href="#" class="cards1">
+                <img src="./images/olx_cover.png" alt="" />
+
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Tackling fraud in OLX Ads
+                  </h5>
+                  <p class="description">
+                    How to tackle frauds that occur through classified ads
+                    posted in olx by tweaking the service provided by olx
+                    presently.
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    UX Research, Classified Ads
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Personal Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2021</p>
+                  </div>
+                </div>
+              </a>
+              <a id="btn3" href="#" class="cards1">
+                <img src="./images/PMS_cover.png" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Project Management System
+                  </h5>
+                  <p class="description">
+                    Migration of an old project management application to a new
+                    system
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    UX Research, Project Management
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">Office Project</p>
+                    <p style="color: var(--secondary-color)">2021</p>
+                  </div>
+                </div>
+              </a>
+            
+              <a id="btn4" href="#" class="cards1">
+                <img src="./images/gpay_cover.png" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Gpay Redesign
+                  </h5>
+                  <p class="description">
+                    Heuristic evaluation of Gpay app and redesign
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    UX Research, UX Design, Fintech
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Personal Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2020</p>
+                  </div>
+                </div>
+              </a>
+              <a id="btn5" href="#" class="cards1">
+                <img src="./images/swiggy_cover.png" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Redesign of swiggy App
+                  </h5>
+                  <p class="description">
+                    Evaluation and redesign of swiggy App
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    UX Research, UX Design, Classified Ads
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Personal Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2021</p>
+                  </div>
+                </div>
+              </a>
+              
+            </div>
+            <!-------------------------------------------------->
+            <!-------------------------------------------------->
+            <!------------Industrial Design gallery----------------->
+            <div class="gallery2">
+              <a id="btn7" href="#" class="cards2">
+                <img src="./images/shroomer_cover.png" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Mushroom growing kit
+                  </h5>
+                  <p class="description">
+                    Design a environment friendly mushroom growing kit 
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    Mushroom kit, Freelance, ID
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Client Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2018</p>
+                  </div>
+                </div>
+              </a>
+              <a id="btn8" href="#" class="cards2">
+                <img src="./images/muse_cover.png" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Headphone design for the modern youth
+                  </h5>
+                  <p class="description">
+                    Understand the ongoing trend and design a Headphone
+                    for the modern youth
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    Product Design, Lifestyle
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Personal Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2018</p>
+                  </div>
+                </div>
+              </a>
+              <a id="btn9" href="#" class="cards2">
+                <img src="./images/mask_cover.png" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Turbine infused air purifying Mask
+                  </h5>
+                  <p class="description">
+                    HEPA filter and turbine for perosnal air purifying mask
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    ID, Air Purifier, Personal Appliance
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Client Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2021</p>
+                  </div>
+                </div>
+              </a>
+              <a id="btn10" href="#" class="cards2">
+                <!-- <img src="./images/accumen_cover.jpg" alt="" /> -->
+                <video src="./videos/Accumen.m4v" autoplay muted width="100%" loop></video>
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Automated Colony Counter Machine
+                  </h5>
+                  <p class="description">
+                   
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    Product Design, Medical Device
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Office Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2019-20</p>
+                  </div>
+                </div>
+              </a>
+              <a id="btn11" href="#" class="cards2">
+                <img src="./images/water_purifier_cover.144.jpg" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    Water Purifier Design for Eureka Forbes
+                  </h5>
+                  <p class="description">
+                   
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    Product Design, Kitchen Appliance
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Office Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2019-20</p>
+                  </div>
+                </div>
+              </a>
+              <a id="btn12" href="#" class="cards2">
+                <img src="./images/razor_cover.png" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    BMW inspired razor
+                  </h5>
+                  <p class="description">
+                   
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    Product Design, Lifestyle
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Personal Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2018</p>
+                  </div>
+                </div>
+              </a>
+              <a id="btn13" href="#" class="cards2">
+                <img src="./images/pura_cover.png" alt="" />
+                <div class="project-info">
+                  <h5
+                    class="project-name"
+                    style="color: var(--secondary-color)"
+                  >
+                    A retro classic air purifier
+                  </h5>
+                  <p class="description">
+                    Design of a retro classic air purifier for the retro lovers
+                  </p>
+                  <p class="tags" style="color: var(--secondary-color)">
+                    ID, Air Purifier, Home Appliance
+                  </p>
+                  <div class="info-bottom">
+                    <p style="color: var(--secondary-color)">
+                      Personal Project
+                    </p>
+                    <p style="color: var(--secondary-color)">2021</p>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+            <div class="boxes">
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="popup">
+      <div class="popupitems">
+        <span class="close">
+          <img src="./icons/cross.svg" alt="" />
+        </span>
+        <img class="project_main" src="./images/classroom app.webp" alt="" />
+        <img class="project_main" src="./images/olx.jpg" alt="" />
+        <img class="project_main" src="./images/PMS.webp" alt="" />
+        <img class="project_main" src="./images/gpay.jpg" alt="" />
+        <img class="project_main" src="./images/swiggy.jpg" alt="" />
+        <img class="project_main" src="./images/shroomer.webp" alt="" />
+        <img class="project_main" src="./images/muse.webp" alt="" />
+        <img class="project_main" src="./images/mask.webp" alt="" />
+        <img class="project_main" src="./images/accumen.webp" alt="" />
+        <img class="project_main" src="./images/water_purifier.webp" alt="" />
+        <img class="project_main" src="./images/razor.webp" alt="" />
+        <img class="project_main" src="./images/pura.webp" alt="" />
+      </div>
+    </section>
+    
+
+    <script src="./script.js"></script>
+    <script>
+      var gallery1 = document.querySelector(".gallery1");
+      var gallery2 = document.querySelector(".gallery2");
+
+      var underline1 = document.querySelector(".underline1");
+      var underline2 = document.querySelector(".underline2");
+
+      function showGallery1() {
+        gallery1.style.display = "grid";
+        gallery2.style.display = "none";
+        underline1.style.width = "100%";
+        underline2.style.width = "0%";
+        gallery1.scrollTo(0, 0);
+      }
+      function showGallery2() {
+        gallery1.style.display = "none";
+        gallery2.style.display = "grid";
+        underline1.style.width = "0%";
+        underline2.style.width = "100%";
+        gallery2.scrollTo(0, 0);
+      }
+      showGallery1();
+
+      function onTabClick(event) {
+        let popup = document.querySelector(".popup");
+        let projectMain = document.querySelectorAll(".project_main");
+        let activeTab = document.querySelectorAll(".gallery a");
+        var span = document.querySelector(".close");
+
+        // console.log(activeTab);
+        // 
+        for (let i = 0; i < projectMain.length; i++) {
+          if (activeTab[i].id == event.target.parentElement.id) {
+            popup.style.display = "block";
+            projectMain[i].style.display = "block";
+            
+            window.onclick = function (event2) {
+              if (event2.target == popup) {
+                popup.style.display = "none";
+                projectMain[i].style.display = "none";
+              }
+            };
+            span.addEventListener("click", () => {
+              popup.style.display = "none";
+              projectMain[i].style.display = "none";
+            });
+          }
+        }
+      }
+      const element = document.querySelector(".gallery");
+
+      element.addEventListener("click", onTabClick, false);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Product Design Portfolio" />
+    <meta name="robots" content="index,follow" />
+    <title>Pushpal Dey Design | Portfolio</title>
+    <link rel="icon" href="./icons/favicon.svg" />
+    <link rel="stylesheet" href="./style.css?ver=1.8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-head">
+      <nav>
+        <div class="nav-left">
+          <a href="./index.html"class="logo">
+            <img src="./icons/logo.svg" alt="" class="icon-colors" />
+          </a>
+          <a href="./index.html" style="text-decoration: none;"><h5>Pushpal Dey Design</h5></a>
+        </div>
+        <div class="theme-toggle">
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label class="label" for="chk">
+            <div class="ball"></div>
+            <img src="./icons/sun.svg" alt="lightmode" class="sun" />
+            <img src="./icons/moon.svg" alt="darkmode" class="moon" />
+          </label>
+        </div>
+        <div class="menu">
+          <img src="./icons/menu.svg" alt="" />
+        </div>
+      </nav>
+      <div class="menu-background">
+        <div class="cross">
+          <img src="./icons/cross.svg" alt="" />
+        </div>
+        <ul>
+          <li><a href="./index.html">Work</a></li>
+          <li><a href="./fun.html" style="font-weight: 900;">Fun</a></li>
+          <li><a href="./aboutme.html">About me</a></li>
+        </ul>
+        <div class="follow">
+          <h5>Follow me at</h5>
+          <div class="social-media-icons">
+            <a href="https://www.behance.net/pushpaldey" target="_blank"
+              ><img
+                src="./icons/behance-square.svg"
+                alt=""
+                class="icon-colors"
+            /></a>
+            <a href="https://www.instagram.com/pushpaldey/" target="_blank"
+              ><img src="./icons/instagram.svg" alt="" class="icon-colors"
+            /></a>
+            <a href="https://www.linkedin.com/in/pushpaldey/" target="_blank"
+              ><img src="./icons/linkedin.svg" alt="" class="icon-colors"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="left">
+        <div class="main-text">
+          <h1>Fun.</h1>
+          <h3>
+            I like to play around <br />
+            with <span class="work-style">3d modelling </span> and <br />
+            <span class="work-style">animations</span> in my spare time.
+          </h3>
+        </div>
+        <div class="main-nav">
+          <div class="page-container">
+            <a href="./index.html" style="text-decoration: none">
+              <div class="circle"></div>
+              <div class="pages">
+                <img src="./icons/work.svg" alt="" class="icon-colors" />
+                <h5>Work</h5>
+              </div></a
+            >
+          </div>
+          <div class="page-container">
+            <a href="./fun.html" style="text-decoration: none">
+              <div class="current-circle"></div>
+              <div class="pages">
+                <img src="./icons/fun.svg" alt="" class="icon-colors" />
+                <h5>Fun</h5>
+              </div></a
+            >
+          </div>
+          <div class="page-container">
+            <a href="./aboutme.html" style="text-decoration: none">
+              <div class="circle"></div>
+              <div class="pages">
+                <img src="./icons/hello.svg" alt="" class="icon-colors" />
+                <h5 class="current-page">About me</h5>
+              </div></a
+            >
+          </div>
+        </div>
+
+        <div class="follow-at">
+          <h5>Follow me at</h5>
+          <div class="social-media-icons">
+            <a href="https://www.behance.net/pushpaldey" target="_blank"
+              ><img
+                src="./icons/behance-square.svg"
+                alt=""
+                class="icon-colors"
+            /></a>
+            <a href="https://www.instagram.com/pushpaldey/" target="_blank"
+              ><img src="./icons/instagram.svg" alt="" class="icon-colors"
+            /></a>
+            <a href="https://www.linkedin.com/in/pushpaldey/" target="_blank"
+              ><img src="./icons/linkedin.svg" alt="" class="icon-colors"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="gallery-space">
+          <div class="sec-nav">
+            <button onclick="showGallery4()">
+              <h5 class="btn4">DailyUI</h5>
+              <div class="underline4"></div>
+            </button>
+            <button onclick="showGallery2()">
+              <h5 class="btn2">Micro-UI</h5>
+              <div class="underline2"></div>
+            </button>
+            <!-- <button onclick="showGallery3()">
+              <h5 class="btn3">Threejs</h5>
+              <div class="underline3"></div>
+            </button> -->
+            
+            <button onclick="showGallery1()">
+              <h5 class="btn1">3D Renders</h5>
+              <div class="underline1"></div>
+            </button>
+          </div>
+          <div class="line1"></div>
+          <div class="gallery">
+             <!------------3d Renders gallery----------------->
+            <div class="gallery1">
+              <a id="btn5" href="#" class="cards1">
+                <img src="./images/3d renders/bathroom.png" alt="" />
+              </a>
+              <a id="btn6" href="#" class="cards1">
+                <img src="./images/3d renders/beedroom.png" alt="" />
+              </a>
+              <a id="btn9" href="#" class="cards1">
+                <img src="./images/3d renders/workout.png" alt="" />
+              </a>
+              <a id="btn7" href="#" class="cards1">
+                <img src="./images/3d renders/leisure.png" alt="" />
+              </a>
+              <a id="btn1" href="#" class="cards1">
+                <img src="./images/3d renders/lamp.jpg" alt="" />
+              </a>
+              <a id="btn2" href="#" class="cards1">
+                <img src="./images/3d renders/chair.jpg" alt="" />
+              </a>
+              <a id="btn3" href="#" class="cards1">
+                <img src="./images/3d renders/chai.jpg" alt="" />
+              </a>
+              <a id="btn4" href="#" class="cards1">
+                <img src="./images/3d renders/zenobia in chains.397.png" alt="" />
+              </a>
+              <a id="btn8" href="#" class="cards1">
+                <img src="./images/3d renders/toaster.368.jpg" alt="" />
+              </a>
+             
+              <a id="btn10" href="#" class="cards1">
+                <img src="./images/3d renders/untitled.379.jpg" alt="" />
+              </a>
+              <a id="btn11" href="#" class="cards1">
+                <img src="./images/3d renders/keyboard.jpg" alt="" />
+              </a>
+            </div>
+            <!----------------------------------------------->
+            <!------------MicroUI gallery-------------------->
+            <div id="gal2" class="gallery2">
+              <div href="#" class="cards">
+                <img src="./images/microUI/send.gif" alt="" />
+              </div>
+              <div href="#" class="cards">
+                <img src="./images/microUI/chat.gif" alt="" />
+              </div>
+              <div href="#" class="cards">
+                <img src="./images/microUI/download.gif" alt="" />
+              </div>
+              <div href="#" class="cards">
+                <img src="./images/microUI/ham.gif" alt="" />
+              </div>
+              <div href="#" class="cards">
+                <img src="./images/microUI/loader1.gif" alt="" />
+              </div>
+              <div href="#" class="cards">
+                <img src="./images/microUI/loader2.gif" alt="" />
+              </div>
+              <div href="#" class="cards">
+                <img src="./images/microUI/send_fail.gif" alt="" />
+              </div>
+              <div href="#" class="cards">
+                <img src="./images/microUI/upload.gif" alt="" />
+              </div>
+            </div>
+            <!----------------------------------------------->
+            
+            <!----------------------------------------------->
+            <!------------DailyUI gallery-------------------->
+            <div class="gallery4">
+              <a id="btn12" href="#" class="cards1">
+                <img src="./images/dailyUI/calc.gif" alt="" />
+              </a>
+              <a id="btn13" href="#" class="cards1">
+                <img src="./images/dailyUI/iPhone 13 mini – 1.png" alt="" />
+              </a>
+              <a id="btn14" href="#" class="cards1">
+                <img src="./images/dailyUI/iPhone 13 mini – 2.png" alt="" />
+              </a>
+              <a id="btn18" href="#" class="cards1">
+                <img src="./images/dailyUI/Web 1920 – 1.png" alt="" />
+              </a>
+              <a id="btn15" href="#" class="cards1">
+                <img src="./images/dailyUI/landing page.png" alt="" />
+              </a>
+              <a id="btn16" href="#" class="cards1">
+                <img src="./images/dailyUI/settings.png" alt="" />
+              </a>
+              <a id="btn17" href="#" class="cards1">
+                <img src="./images/dailyUI/userprofile.png" alt="" />
+              </a>
+            </div>
+            <div class="boxes">
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+          </div>
+          <!----------------------------------------------->
+        </div>
+      </div>
+    </section>
+    <section class="popup">
+      <div class="popupitems">
+        <span class="close">
+          <img src="./icons/cross.svg" alt="" />
+        </span>
+        <div class="imageWrapper"></div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+    <script>
+      var gallery1 = document.querySelector(".gallery1");
+var gallery2 = document.querySelector(".gallery2");
+var gallery3 = document.querySelector(".gallery3");
+var gallery4 = document.querySelector(".gallery4");
+
+var underline1 = document.querySelector(".underline1");
+var underline2 = document.querySelector(".underline2");
+var underline3 = document.querySelector(".underline3");
+var underline4 = document.querySelector(".underline4");
+
+function showGallery1() {
+  gallery1.style.display = "grid";
+  gallery2.style.display = "none";
+  // gallery3.style.display = "none";
+  gallery4.style.display = "none";
+  underline1.style.width = "100%";
+  underline2.style.width = "0%";
+  // underline3.style.width = "0%";
+  underline4.style.width = "0%";
+}
+function showGallery2() {
+  gallery1.style.display = "none";
+  gallery2.style.display = "grid";
+  // gallery3.style.display = "none";
+  gallery4.style.display = "none";
+  underline1.style.width = "0%";
+  underline2.style.width = "100%";
+  // underline3.style.width = "0%";
+  underline4.style.width = "0%";
+}
+// function showGallery3() {
+//   gallery1.style.display = "none";
+//   gallery2.style.display = "none";
+//   gallery3.style.display = "grid";
+//   gallery4.style.display = "none";
+//   underline1.style.width = "0%";
+//   underline2.style.width = "0%";
+//   underline3.style.width = "100%";
+//   underline4.style.width = "0%";
+// }
+function showGallery4() {
+  gallery1.style.display = "none";
+  gallery2.style.display = "none";
+  // gallery3.style.display = "none";
+  gallery4.style.display = "grid";
+  underline1.style.width = "0%";
+  underline2.style.width = "0%";
+  // underline3.style.width = "0%";
+  underline4.style.width = "100%";
+}
+      showGallery4();
+
+      function onTabClick(event) {
+        let popup = document.querySelector(".popup");
+        let activeTab = document.querySelectorAll(".gallery a");
+        var span = document.querySelector(".close");
+        var wrapper = document.querySelector(".imageWrapper");
+        var img = document.querySelectorAll(".gallery img")
+        var popupitems = document.querySelector(".popupitems")
+
+        // console.log(event.target.parentElement.parentElement.id);
+        // if (event.target.parentElement.parentElement.id == gal2) {
+        // popup.style.display = "block";
+        // wrapper.appendChild(event.target.cloneNode(true));
+
+        // window.onclick = function (event2) {
+        //       if (event2.target == popup) {
+        //         popup.style.display = "none";
+        //         popupitems.style.marginTop = "3rem";
+        //         wrapper.innerHTML = " ";
+        //         // popup.scrollTop(0);
+        //       }
+        //     }
+        //     span.addEventListener("click", () => {
+        //       popup.style.display = "none";
+        //       popupitems.style.marginTop = "3rem";
+        //       wrapper.innerHTML = " ";
+        //     })
+        //     const H =((window.innerHeight - wrapper.offsetHeight)/20);
+        //     if (wrapper.offsetHeight < window.innerHeight){
+        //       popupitems.style.marginTop = H + "rem";
+        //     }
+        //   }
+        // 
+        for (let i = 0; i < activeTab.length; i++) {
+          if (activeTab[i].id == event.target.parentElement.id) {
+            popup.style.display = "block";
+            wrapper.appendChild(event.target.cloneNode(true));
+            const H =((window.innerHeight - wrapper.offsetHeight)/20);
+            if (wrapper.offsetHeight < window.innerHeight){
+              popupitems.style.marginTop = H + "rem";
+            }
+
+            window.onclick = function (event2) {
+              if (event2.target == popup) {
+                popup.style.display = "none";
+                popupitems.style.marginTop = "3rem";
+                wrapper.innerHTML = " ";
+                // popup.scrollTop(0);
+              }
+            };
+            span.addEventListener("click", () => {
+              popup.style.display = "none";
+              popupitems.style.marginTop = "3rem";
+              wrapper.innerHTML = " ";
+            });
+          }
+        }
+      }
+      const element = document.querySelector(".gallery");
+
+      element.addEventListener("click", onTabClick, false);
+    </script>
+  </body>
+</html>
